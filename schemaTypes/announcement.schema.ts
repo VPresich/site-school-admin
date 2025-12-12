@@ -44,6 +44,8 @@ export const announcement = defineType({
           {title: 'Фестиваль', value: 'festival'},
           {title: 'Прийом', value: 'admissions'},
           {title: 'Оголошення', value: 'announcement'},
+          {title: 'Прослухування', value: 'audition'},
+          {title: 'Творча зустріч', value: 'meeting'},
         ],
         layout: 'dropdown',
       },

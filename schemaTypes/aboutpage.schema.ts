@@ -1,4 +1,5 @@
 import {defineType, defineField} from 'sanity'
+import {section} from './section'
 
 export const aboutpage = defineType({
   name: 'about',
@@ -112,6 +113,12 @@ export const aboutpage = defineType({
       type: 'array',
       of: [{type: 'block'}],
       description: 'Інформація про розвиток та інноваційні підходи',
+    }),
+    defineField({
+      name: 'sections',
+      title: 'Розділи сторінки',
+      type: 'array',
+      of: [section],
     }),
   ],
 

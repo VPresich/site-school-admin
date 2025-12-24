@@ -5,5 +5,14 @@ import {event} from './event.schema'
 import {department} from './department.schema'
 import {homepage} from './homepage.schema'
 import {aboutpage} from './aboutpage.schema'
+import {mediapage} from './mediapage.schema'
 
-export const schemaTypes = [archive, announcement, event, department, homepage, aboutpage]
+export const schemaTypes = [
+  archive,
+  announcement,
+  event,
+  department,
+  homepage,
+  aboutpage,
+  mediapage,
+]

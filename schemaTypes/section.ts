@@ -27,6 +27,12 @@ export const section = defineField({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'mainphoto',
+      title: 'Велике фото',
+      type: 'image',
+      options: {hotspot: true},
+    }),
+    defineField({
       name: 'gallery',
       title: 'Галерея',
       type: 'array',

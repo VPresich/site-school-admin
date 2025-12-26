@@ -68,5 +68,11 @@ export const archive = defineType({
       type: 'array',
       of: [defineField({name: 'video', type: 'url'})],
     }),
+    defineField({
+      name: 'poster',
+      title: 'Aфіша',
+      type: 'image',
+      options: {hotspot: true},
+    }),
   ],
 })

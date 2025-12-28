@@ -1,6 +1,5 @@
 import {defineType, defineField} from 'sanity'
 import {photoItem} from './photoItem'
-import {mediaItem} from './mediaItem'
 
 export const mediapage = defineType({
   name: 'media',
@@ -16,9 +15,8 @@ export const mediapage = defineType({
 
     defineField({
       name: 'videos',
-      title: 'Відео',
       type: 'array',
-      of: [mediaItem],
+      of: [{type: 'mediaItem'}],
     }),
 
     defineField({

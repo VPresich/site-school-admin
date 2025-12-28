@@ -1,6 +1,6 @@
-import {defineField} from 'sanity'
+import {defineType, defineField} from 'sanity'
 
-export const mediaItem = defineField({
+export const mediaItem = defineType({
   name: 'mediaItem',
   title: 'Відео (YouTube)',
   type: 'object',
@@ -9,16 +9,12 @@ export const mediaItem = defineField({
       name: 'title',
       title: 'Назва відео',
       type: 'string',
-      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'url',
       title: 'YouTube посилання',
       type: 'url',
-      validation: (Rule) =>
-        Rule.required().uri({
-          scheme: ['http', 'https'],
-        }),
+      validation: (Rule) => Rule.required().uri({scheme: ['http', 'https']}),
     }),
   ],
 })

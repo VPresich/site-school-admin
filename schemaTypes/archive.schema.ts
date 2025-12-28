@@ -51,6 +51,7 @@ export const archive = defineType({
           {title: 'Оголошення', value: 'announcement'},
           {title: 'Прослухування', value: 'audition'},
           {title: 'Творча зустріч', value: 'meeting'},
+          {title: 'Досягнення', value: 'achievements'},
         ],
         layout: 'dropdown',
       },
@@ -64,9 +65,22 @@ export const archive = defineType({
     }),
     defineField({
       name: 'videos',
-      title: 'Відео (YouTube)',
       type: 'array',
-      of: [defineField({name: 'video', type: 'url'})],
+      of: [{type: 'mediaItem'}],
+    }),
+    defineField({
+      name: 'diplomas',
+      title: 'Дипломи',
+      type: 'array',
+      of: [
+        defineField({
+          name: 'image',
+          type: 'image',
+          options: {
+            hotspot: true,
+          },
+        }),
+      ],
     }),
     defineField({
       name: 'poster',

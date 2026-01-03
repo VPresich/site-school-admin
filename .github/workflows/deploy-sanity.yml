@@ -22,10 +22,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Login to Sanity
-        uses: sanity-io/action-login@v1
-        with:
-          token: ${{ secrets.SANITY_DEPLOY_TOKEN }}
-
       - name: Deploy Studio
-        run: npm run deploy
+        run: npx sanity deploy --force
+        env:
+          SANITY_AUTH_TOKEN: ${{ secrets.SANITY_DEPLOY_TOKEN }}
